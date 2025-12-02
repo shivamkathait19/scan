@@ -10,7 +10,14 @@ class _MainscreenState extends State<Mainscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     appBar: AppBar(
+       title: Text("Scan itttt",style: TextStyle(
+           fontWeight: FontWeight.bold),),
+     backgroundColor: Colors.black,
+       foregroundColor: Colors.white,
+     )
 
+     ),
     );
   }
 }
