@@ -12,13 +12,16 @@ class _SplashscreenState extends State<Splashscreen> {
     return Scaffold(
       appBar: AppBar(
         title:Text("Scan your product",style: TextStyle(
-          fontSize: 15
+          fontSize: 50, fontWeight: FontWeight.w800,fontFamily:'StoryScript-Regular'
         ),),
       ),
       body: Column(
         children: [
       Text("Scan-product"),
         ],
+
+
+
       ),
     );
   }
