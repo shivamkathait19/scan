@@ -55,7 +55,7 @@ class _SplashscreenState extends State<Splashscreen>
                   color: Colors.white.withOpacity(0.15),
 
                   borderRadius: BorderRadius.circular(10),
-border: Border.all(color: Colors.black),
+                border: Border.all(color: Colors.white70,width: 5),
                 ),
                 child: Center(
                   child: Padding(
@@ -77,21 +77,20 @@ border: Border.all(color: Colors.black),
                 padding: const EdgeInsets.symmetric(
                     horizontal: 40, vertical: 18),
                 shape: RoundedRectangleBorder(
+
                   borderRadius: BorderRadius.circular(30),
                 ),
                 backgroundColor: Colors.white,
-                elevation: 15,
+                elevation: 20,
               ),
               onPressed: () {},
-              child: const Text(
-                "Start Scanning",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 20,
+              child: const Icon(
+                Icons.arrow_circle_right,
+                size: 50,
+
                 ),
               ),
-            ),
+
           ],
         ),
       ),
