@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
 
@@ -6,29 +7,93 @@ class Splashscreen extends StatefulWidget {
   State<Splashscreen> createState() => _SplashscreenState();
 }
 
-class _SplashscreenState extends State<Splashscreen> {
+class _SplashscreenState extends State<Splashscreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  Animation<double>? _scale;
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title:
-        Center( child: Text("Scan your product",style: TextStyle(
-          fontSize: 50, fontWeight: FontWeight.w800,fontFamily:'StoryScript-Regular'
-       ,color: Colors.white ),),),
-      ),
-      body: Column(
-        children: [
-          Padding(
-        padding:  EdgeInsets.only(top: 300,left: 130),
-        child: Image.network("https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fillustrations%2Fpikachu-pokemon-character-cartoon-5527375%2F&psig=AOvVaw0EbanOfrMr-MKCd31awU6p&ust=1764866721084000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjz4KfvoZEDFQAAAAAdAAAAABAE",
-        height: 500,
-          width: 300,
-        ),
-      ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
 
-        ]
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFFFF8A00),
+              Color(0xFFFF3D00),
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Scan Your Product",
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 42,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+                letterSpacing: 1.5,
+              ),
+            ),
+
+            const SizedBox(height: 40),
+
+            Container(
+                height: 220,
+                width: 220,
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.15),
+
+                  borderRadius: BorderRadius.circular(10),
+border: Border.all(color: Colors.black),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(0.0),
+                    child: Image.network(
+                      "https://cdn.pixabay.com/photo/2020/08/29/16/07/pikachu-5527375_1280.jpg",
+                      fit: BoxFit.cover,
+                      width: 240,
+                    ),
+                  ),
+                ),
+              ),
+
+
+            const SizedBox(height: 50),
+
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 40, vertical: 18),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                backgroundColor: Colors.white,
+                elevation: 15,
+              ),
+              onPressed: () {},
+              child: const Text(
+                "Start Scanning",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
