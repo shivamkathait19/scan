@@ -11,11 +11,15 @@ class _MainscreenState extends State<Mainscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
      appBar: AppBar(
-       title: Text("Scan itttt",style: TextStyle(
-           fontWeight: FontWeight.bold),),
+       title: Center(
+         child: Padding(
+           padding: EdgeInsets.only(right: 20),
+           child: Text("Scan itttt",style: TextStyle(
+               fontWeight: FontWeight.bold),),
+         ),
+       ),
      backgroundColor: Colors.black,
        foregroundColor: Colors.white,
-     )
 
      ),
     );
