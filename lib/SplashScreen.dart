@@ -87,10 +87,8 @@ class _SplashscreenState extends State<Splashscreen>
               child: const Icon(
                 Icons.arrow_circle_right,
                 size: 50,
-
-                ),
               ),
-
+              ),
           ],
         ),
       ),
