@@ -13,7 +13,7 @@ class _MainscreenState extends State<Mainscreen> {
      appBar: AppBar(
        title: Center(
          child: Padding(
-           padding: EdgeInsets.only(right: 20),
+           padding: EdgeInsets.only(right: 70),
            child: Text("Scan itttt",style: TextStyle(
                fontWeight: FontWeight.bold),),
          ),
@@ -22,6 +22,30 @@ class _MainscreenState extends State<Mainscreen> {
        foregroundColor: Colors.white,
 
      ),
+      drawer: Drawer(
+        backgroundColor: Colors.black,
+        shadowColor: Colors.white,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+        DrawerHeader(
+        decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.black, Colors.brown],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+        CircleAvatar(
+        radius: 30,
+        backgroundColor: Colors.white,
+        child: Icon(Icons.person, color: Colors.teal, size: 30),
+      ),
+      SizedBox(height: 10),
+    )))),
     );
   }
 }
