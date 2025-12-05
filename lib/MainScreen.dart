@@ -87,7 +87,12 @@ class _MainscreenState extends State<Mainscreen> {
         ),
       ),
 
+backgroundColor: Colors.brown,
+      body: Column(
+        children: [
 
+        ],
+      ),
     );
   }
 }
