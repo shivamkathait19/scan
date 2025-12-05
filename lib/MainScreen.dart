@@ -23,29 +23,44 @@ class _MainscreenState extends State<Mainscreen> {
 
      ),
       drawer: Drawer(
-        backgroundColor: Colors.black,
-        shadowColor: Colors.white,
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-        DrawerHeader(
-        decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.black, Colors.brown],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children: [
-        CircleAvatar(
-        radius: 30,
-        backgroundColor: Colors.white,
-        child: Icon(Icons.person, color: Colors.teal, size: 30),
+          DrawerHeader
+            (decoration: BoxDecoration(
+           gradient: LinearGradient(colors: [Colors.cyanAccent],
+             begin: Alignment.topLeft,
+             end: Alignment.bottomRight,
+           )
+
+
+          ),
+              child: Column(
+
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.white,
+                    child: Icon(Icons.person, color: Colors.teal, size: 30),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Welcome',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
+
+            ],
+          ))
+        ],
       ),
-      SizedBox(height: 10),
-    )))),
+      ),
     );
   }
 }
