@@ -25,7 +25,6 @@ class _MainscreenState extends State<Mainscreen> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.all(10),
-
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
@@ -43,15 +42,15 @@ class _MainscreenState extends State<Mainscreen> {
                 children: [
                   CircleAvatar(
                     radius: 35,
-                    backgroundColor: Colors.white,
-                    child: Icon(Icons.person, size: 40, color: Colors.teal),
+                    backgroundColor: Colors.white10,
+                    child: Icon(Icons.person, size: 40, color: Colors.black),
                   ),
                   SizedBox(height: 12),
                   Text(
                     "Welcome",
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
+                      color: Colors.black,
+                      fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -80,6 +79,10 @@ class _MainscreenState extends State<Mainscreen> {
               title: Text("Logout"),
               onTap: () {},
             ),
+            Divider(
+              height: 20,
+            ),
+
           ],
         ),
       ),
