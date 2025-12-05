@@ -23,44 +23,68 @@ class _MainscreenState extends State<Mainscreen> {
 
      ),
       drawer: Drawer(
-      child: ListView(
-        children: [
-          DrawerHeader
-            (decoration: BoxDecoration(
-           gradient: LinearGradient(colors: [Colors.cyanAccent],
-             begin: Alignment.topLeft,
-             end: Alignment.bottomRight,
-           )
+        child: ListView(
+          padding: EdgeInsets.all(10),
 
-
-          ),
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.cyanAccent,
+                    Colors.teal,
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
               child: Column(
-
-            children: [
-              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CircleAvatar(
-                    radius: 30,
+                    radius: 35,
                     backgroundColor: Colors.white,
-                    child: Icon(Icons.person, color: Colors.teal, size: 30),
+                    child: Icon(Icons.person, size: 40, color: Colors.teal),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 12),
                   Text(
-                    'Welcome',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                  SizedBox(
-                    height: 10,
+                    "Welcome",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
+            ),
 
-            ],
-          ))
-        ],
+            // Drawer menu items
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Profile"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("Settings"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text("Logout"),
+              onTap: () {},
+            ),
+          ],
+        ),
       ),
-      ),
+
+
     );
   }
 }
