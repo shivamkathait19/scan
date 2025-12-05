@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scan_all/MainScreen.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -86,7 +87,10 @@ class _SplashscreenState extends State<Splashscreen>
                 backgroundColor: Colors.white,
                 elevation: 20,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, 
+                    MaterialPageRoute(builder: (context)=>Mainscreen()));
+              },
               child: const Icon(
                 Icons.arrow_circle_right,
                 size: 50,
