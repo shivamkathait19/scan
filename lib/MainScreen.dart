@@ -14,7 +14,7 @@ class _MainscreenState extends State<Mainscreen> {
        title: Center(
          child: Padding(
            padding: EdgeInsets.only(right: 70),
-           child: Text("Scan itttt",style: TextStyle(
+           child: Text("SCAN IT",style: TextStyle(
                fontWeight: FontWeight.bold),),
          ),
        ),
