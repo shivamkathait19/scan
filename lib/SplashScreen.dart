@@ -35,13 +35,16 @@ class _SplashscreenState extends State<Splashscreen>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Welcome to ",style: TextStyle(
+              fontSize: 50
+            ),),
             Text(
               "Scan Your Product",
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 42,
                 fontWeight: FontWeight.w900,
-                color: Colors.white,
+                color: Colors.black,
                 letterSpacing: 1.5,
               ),
             ),
