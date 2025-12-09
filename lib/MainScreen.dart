@@ -90,7 +90,7 @@ class _MainscreenState extends State<Mainscreen> {
 backgroundColor: Colors.blue,
       body: Column(
         children: [
-
+Text("   Scan here "),
         ],
       ),
     );
