@@ -80,7 +80,7 @@ class _MainscreenState extends State<Mainscreen> {
               onTap: () {},
             ),
             Divider(
-              height: 20,
+              height: 30,
             ),
 
           ],
@@ -90,7 +90,7 @@ class _MainscreenState extends State<Mainscreen> {
 backgroundColor: Colors.blue,
       body: Column(
         children: [
-          
+
         ],
       ),
     );
