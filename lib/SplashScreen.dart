@@ -25,7 +25,7 @@ class _SplashscreenState extends State<Splashscreen>
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFFFF8A00),
+              Color(0xFF0B9F7A),
               Color(0xFFFF3D00),
             ],
             begin: Alignment.topLeft,
@@ -90,7 +90,7 @@ class _SplashscreenState extends State<Splashscreen>
                     MaterialPageRoute(builder: (context)=>Mainscreen()));
               },
               child: const Icon(
-                Icons.arrow_circle_right,
+                Icons.next_plan,
                 size: 50,
               ),
               ),
