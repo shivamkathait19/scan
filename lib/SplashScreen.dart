@@ -63,7 +63,7 @@ class _SplashscreenState extends State<Splashscreen>
                 ),
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(0.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Image.network(
                       "https://cdn.pixabay.com/photo/2020/08/29/16/07/pikachu-5527375_1280.jpg",
                       fit: BoxFit.cover,
@@ -72,9 +72,7 @@ class _SplashscreenState extends State<Splashscreen>
                   ),
                 ),
               ),
-
-
-            const SizedBox(height: 50),
+            SizedBox(height: 50),
 
             ElevatedButton(
               style: ElevatedButton.styleFrom(
