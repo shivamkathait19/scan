@@ -7,7 +7,13 @@ class projectX extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Scan project ",style: TextStyle(backgroundColor: Colors.black),),
+        backgroundColor: Colors.white,
+        title: Text("Scan project ",style: TextStyle(backgroundColor: Colors.black,fontSize: 20),),
+      ),
+      body: Column(
+        children: [
+          
+        ],
       ),
     );
   }
