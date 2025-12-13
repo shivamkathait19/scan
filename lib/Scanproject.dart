@@ -12,7 +12,7 @@ class projectX extends StatelessWidget {
       ),
       body: Column(
         children: [
-          
+
         ],
       ),
     );
