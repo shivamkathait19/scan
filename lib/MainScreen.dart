@@ -96,3 +96,17 @@ Text("   Scan here "),
     );
   }
 }
+  class Settingpage extends StatelessWidget {
+    const Settingpage({super.key});
+  
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+appBar: AppBar(
+  title: 
+  Text("Setting",),
+),
+      );
+    }
+  }
+  
