@@ -109,4 +109,28 @@ appBar: AppBar(
       );
     }
   }
-  
+class Profilegpage extends StatelessWidget {
+  Profilegpage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:
+        Text("Setting",),
+      ),
+    );
+  }
+} class page extends StatelessWidget {
+  const Settingpage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:
+        Text("Setting",),
+      ),
+    );
+  }
+}
