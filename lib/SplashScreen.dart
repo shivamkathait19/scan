@@ -88,8 +88,8 @@ class _SplashscreenState extends State<Splashscreen>
                 backgroundColor: Colors.white,
                 elevation: 20,
               ),
-              onPressed: () {
-                
+              onPressed: (_Mainload) {
+
               },
               child: const Icon(
                 Icons.next_plan,
