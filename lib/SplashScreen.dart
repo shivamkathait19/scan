@@ -12,13 +12,16 @@ class _SplashscreenState extends State<Splashscreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   Animation<double>? _scale;
-
-
+   void _Mainload(){
+     Navigator.pushReplacement(context,
+       MaterialPageRoute(builder: (context)=>Mainscreen()));
+   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+
         width: double.infinity,
         height: double.infinity,
 
@@ -86,8 +89,7 @@ class _SplashscreenState extends State<Splashscreen>
                 elevation: 20,
               ),
               onPressed: () {
-                Navigator.push(context, 
-                    MaterialPageRoute(builder: (context)=>Mainscreen()));
+                
               },
               child: const Icon(
                 Icons.next_plan,
