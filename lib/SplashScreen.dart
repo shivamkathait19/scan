@@ -89,8 +89,8 @@ class _SplashscreenState extends State<Splashscreen>
                 elevation: 20,
               ),
               onPressed:  _Mainload,
-              child: const Icon(
-                Icons.next_plan,
+              child:  Icon(
+                Icons.near_me,
                 size: 50,
               ),
               ),
