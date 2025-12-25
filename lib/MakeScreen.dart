@@ -33,6 +33,7 @@ class _projectXState extends State<projectX> {
                     decoration: BoxDecoration(
                       color: Colors.white
                     ),
+                    child: ,
                   );
                 }
               )
