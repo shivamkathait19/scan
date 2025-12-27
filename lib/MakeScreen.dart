@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import '''
+package:flutter/material.dart''';
 
 class projectX extends StatefulWidget {
   const projectX({super.key});
@@ -8,6 +9,7 @@ class projectX extends StatefulWidget {
 }
 
 class _projectXState extends State<projectX> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +18,7 @@ class _projectXState extends State<projectX> {
         title: Text("Try  project ",style: TextStyle(backgroundColor: Colors.black,fontSize: 20),),
       ),
       body: Container(
+        margin: EdgeInsets.all(5),
         height: double.infinity,
         width: double.infinity,
         child: Column(
@@ -33,7 +36,7 @@ class _projectXState extends State<projectX> {
                     decoration: BoxDecoration(
                       color: Colors.white
                     ),
-                    child: ,
+                    //child: ,
                   );
                 }
               )

@@ -7,118 +7,46 @@ class Mainscreen extends StatefulWidget {
 }
 
 class _MainscreenState extends State<Mainscreen> {
+  List<String> Items=[
+    'home'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
-       title: Center(
-         child: Padding(
-           padding: EdgeInsets.only(right: 70),
-           child: Text("SCAN IT",style: TextStyle(
-               fontWeight: FontWeight.bold),),
-         ),
-       ),
-     backgroundColor: Colors.black,
-       foregroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
 
-     ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.all(10),
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.cyanAccent,
-                    Colors.teal,
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CircleAvatar(
-                    radius: 35,
-                    backgroundColor: Colors.white10,
-                    child: Icon(Icons.person, size: 40, color: Colors.black),
-                  ),
-                  SizedBox(height: 12),
-                  Text(
-                    "Welcome",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            // Drawer menu items
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("Home"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text("Profile"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text("Settings"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title: Text("Logout"),
-              onTap: () {},
-            ),
-            Divider(
-              height: 30,
-            ),
-
-          ],
         ),
-      ),
+        body: Container(
+          margin: EdgeInsets.all(1),
+          height: double.infinity,
+          width: double.infinity,
+          child: Column(
+            children: [
+              SizedBox(
+                  height: 60,
+                  width: double.infinity,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (ctx,index){
+                        return Container(
+                          margin: EdgeInsets.all(5),
+                          width: 80,
+                          height: 45,
+                          decoration: BoxDecoration(
+                              color: Colors.white,),
+                            child:Center(
+                              child: Text(Items[index],style: FontStyle.values,),
+                            )
 
-backgroundColor: Colors.blue,
-      body: Column(
-        children: [
-Text("   Scan here "),
-        ],
-      ),
-    );
-  }
-}
-  class Settingpage extends StatelessWidget {
-    const Settingpage({super.key});
-  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-appBar: AppBar(
-  title: 
-  Text("Setting",),
-),
-      );
-    }
-  }
-class Profilegpage extends StatelessWidget {
-  Profilegpage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title:
-        Text("Setting",),
-      ),
+                          //child: ,
+                        );
+                      }
+                  )
+              )
+            ],
+          ),
+        )
     );
   }
 }
