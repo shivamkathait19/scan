@@ -30,8 +30,14 @@ class _MainscreenState extends State<Mainscreen> {
                     itemCount: Items.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (ctx,index){
+                      return GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            current = index;
+                          });
+                        },
 
-                        return Container(
+                         child :  AnimatedContainer(duration: Duration(milliseconds: 300),
                           margin: EdgeInsets.all(5),
                           width: 80,
                           height: 45,
@@ -40,9 +46,9 @@ class _MainscreenState extends State<Mainscreen> {
                             child:Center(
                               child: Text(Items[index],)
                             )
-
+                      ),
                           //child: ,
-                        );
+                      );
                       }
                   )
               )
