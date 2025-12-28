@@ -36,8 +36,7 @@ class _MainscreenState extends State<Mainscreen> {
                             current = index;
                           });
                         },
-
-                         child :  AnimatedContainer(duration: Duration(milliseconds: 300),
+                        child :  AnimatedContainer(duration: Duration(milliseconds: 300),
                           margin: EdgeInsets.all(5),
                           width: 80,
                           height: 45,
@@ -46,13 +45,11 @@ class _MainscreenState extends State<Mainscreen> {
 border: current == index ? Border.all(color: Colors.deepPurple,width: 4):null
                           ),
                             child:Center(
-                              child: Text(Items[index],
-                             style: GoogleFonts.laila(
-                              color :current == index ? color : current == index ? Colors.black
-                              )
+                              child: Text(Items[index],),/*fontWeight : FontWeight.w500,*/
+                            //  color :current == index ? color : current == index ? Colors.black
+
                             )
-                            )
-                        ),
+                      ),
                           //child: ,
                       );
                       }
