@@ -41,12 +41,18 @@ class _MainscreenState extends State<Mainscreen> {
                           margin: EdgeInsets.all(5),
                           width: 80,
                           height: 45,
-                          decoration: BoxDecoration(
-                              color: Colors.white,),
+                          decoration: BoxDecoration(color: current ==index?  Colors.white70 : Colors.white54,
+                            borderRadius: current == index?BorderRadius.circular(15): BorderRadius.circular(10),
+border: current == index ? Border.all(color: Colors.deepPurple,width: 4):null
+                          ),
                             child:Center(
-                              child: Text(Items[index],)
+                              child: Text(Items[index],
+                             style: GoogleFonts.laila(
+                              color :current == index ? color : current == index ? Colors.black
+                              )
                             )
-                      ),
+                            )
+                        ),
                           //child: ,
                       );
                       }
