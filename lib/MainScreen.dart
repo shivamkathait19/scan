@@ -36,7 +36,7 @@ class _MainscreenState extends State<Mainscreen> {
                           decoration: BoxDecoration(
                               color: Colors.white,),
                             child:Center(
-                              child: Text(Items[index],style: FontStyle.values,),
+                              child: Text(Items[index],)
                             )
 
                           //child: ,
