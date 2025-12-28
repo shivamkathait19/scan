@@ -10,13 +10,12 @@ class _MainscreenState extends State<Mainscreen> {
   List<String> Items=[
     'home'
   ];
+  int current = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
-
-        ),
+          backgroundColor: Colors.black,),
         body: Container(
           margin: EdgeInsets.all(1),
           height: double.infinity,
@@ -27,8 +26,11 @@ class _MainscreenState extends State<Mainscreen> {
                   height: 60,
                   width: double.infinity,
                   child: ListView.builder(
+                    physics: BouncingScrollPhysics(),
+                    itemCount: Items.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (ctx,index){
+
                         return Container(
                           margin: EdgeInsets.all(5),
                           width: 80,
