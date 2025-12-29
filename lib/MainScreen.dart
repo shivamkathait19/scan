@@ -30,30 +30,44 @@ class _MainscreenState extends State<Mainscreen> {
                     itemCount: Items.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (ctx,index){
-                      return GestureDetector(
-                        onTap: (){
-                          setState(() {
-                            current = index;
-                          });
-                        },
-                        child :  AnimatedContainer(duration: Duration(milliseconds: 300),
-                          margin: EdgeInsets.all(5),
-                          width: 80,
-                          height: 45,
-                          decoration: BoxDecoration(color: current ==index?  Colors.white70 : Colors.white54,
-                            borderRadius: current == index?BorderRadius.circular(15): BorderRadius.circular(10),
-border: current == index ? Border.all(color: Colors.deepPurple,width: 4):null
-                          ),
-                            child:Center(
-                              child: Text(Items[index],),/*fontWeight : FontWeight.w500,*/
-                            //  color :current == index ? color : current == index ? Colors.black
+                      return Column(
+                        children: [
+                          GestureDetector(
+                            onTap: (){
+                              setState(() {
+                                current = index;
+                              });
+                            },
+                            child :  AnimatedContainer(duration: Duration(milliseconds: 300),
+                              margin: EdgeInsets.all(5),
+                              width: 80,
+                              height: 45,
+                              decoration: BoxDecoration(color: current ==index?  Colors.white70 : Colors.white54,
+                                borderRadius: current == index?BorderRadius.circular(15): BorderRadius.circular(10), border: current == index ? Border.all(color: Colors.deepPurple,width: 4):null
+                              ),
+                                child:Center(
+                                  child: Text(Items[index],),/*fontWeight : FontWeight.w500,*/
+                                //  color :current == index ? color : current == index ? Colors.black
 
-                            )
-                      ),
-                          //child: ,
+                                )
+                          ),
+                              //child: ,
+                          ),
+                          Visibility(child:Container(width: 5,height: 5,
+                          decoration: BoxDecoration(shape: BoxShape.circle,
+                            color: Colors.deepPurple
+                          ),
+                          ))
+                        ],
                       );
                       }
                   )
+              )
+            //main body
+             , Container( margin: EdgeInsets.only(top: 40.0) ,
+              width: double.infinity,
+                height: 500,
+                color: Colors.red,
               )
             ],
           ),
