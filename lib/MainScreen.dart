@@ -10,6 +10,9 @@ class _MainscreenState extends State<Mainscreen> {
   List<String> Items=[
     'home'
   ];
+  List<IconData> icons = [
+    Icons.home
+  ];
   int current = 0;
   @override
   Widget build(BuildContext context) {
@@ -46,8 +49,9 @@ class _MainscreenState extends State<Mainscreen> {
                                 borderRadius: current == index?BorderRadius.circular(15): BorderRadius.circular(10), border: current == index ? Border.all(color: Colors.deepPurple,width: 4):null
                               ),
                                 child:Center(
-                                  child: Text(Items[index],),/*fontWeight : FontWeight.w500,*/
-                                //  color :current == index ? color : current == index ? Colors.black
+                                  child: Text(Items[index]),
+                                    fontWeight : FontWeight.w500,
+                                 color :current == index ? color : current == index ? Colors.black
 
                                 )
                           ),
@@ -67,7 +71,17 @@ class _MainscreenState extends State<Mainscreen> {
              , Container( margin: EdgeInsets.only(top: 40.0) ,
               width: double.infinity,
                 height: 500,
-                color: Colors.red,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons[current],size: 200, color: Colors.deepPurple,)
+                 SizedBox(
+                   height: 10,
+                 ),
+                    Text(items[current],style: GoogleFonts.laila(fontWeight: FontWeight.w500,fontSize:30,color:Colors.deepPurpleAccent),)
+                    
+                  ],
+                ),
               )
             ],
           ),
