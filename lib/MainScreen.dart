@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 class Mainscreen extends StatefulWidget {
   const Mainscreen({super.key});
 
@@ -49,15 +51,14 @@ class _MainscreenState extends State<Mainscreen> {
                                 borderRadius: current == index?BorderRadius.circular(15): BorderRadius.circular(10), border: current == index ? Border.all(color: Colors.deepPurple,width: 4):null
                               ),
                                 child:Center(
-                                  child: Text(Items[index]),
-                                    fontWeight : FontWeight.w500,
-                                 color :current == index ? color : current == index ? Colors.black
-
+                                  child: Text(Items[index], style:  TextStyle(fontWeight : FontWeight.w500,
+                                  color : current == index ? Colors.black : Colors.black54),),
                                 )
                           ),
                               //child: ,
                           ),
-                          Visibility(child:Container(width: 5,height: 5,
+                          Visibility(
+                              child:Container(width: 5,height: 5,
                           decoration: BoxDecoration(shape: BoxShape.circle,
                             color: Colors.deepPurple
                           ),
@@ -69,16 +70,16 @@ class _MainscreenState extends State<Mainscreen> {
               )
             //main body
              , Container( margin: EdgeInsets.only(top: 40.0) ,
-              width: double.infinity,
+                 width: double.infinity,
                 height: 500,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons[current],size: 200, color: Colors.deepPurple,)
+                    Icon(icons[current],size: 200, color: Colors.deepPurple,),
                  SizedBox(
                    height: 10,
                  ),
-                    Text(items[current],style: GoogleFonts.laila(fontWeight: FontWeight.w500,fontSize:30,color:Colors.deepPurpleAccent),)
+                    Text(Items[current],style: GoogleFonts.laila(fontWeight: FontWeight.w500,fontSize:30,color:Colors.deepPurpleAccent),)
                     
                   ],
                 ),
