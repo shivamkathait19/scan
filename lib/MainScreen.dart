@@ -80,7 +80,6 @@ class _MainscreenState extends State<Mainscreen> {
                    height: 10,
                  ),
                     Text(Items[current],style: GoogleFonts.laila(fontWeight: FontWeight.w500,fontSize:30,color:Colors.deepPurpleAccent),)
-                    
                   ],
                 ),
               )
